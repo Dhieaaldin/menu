@@ -5,220 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop Menu</title>
     <style>
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        header img {
-            max-width: 100%;
-            height: 3%;
-            border-radius: 8px;
-            height: auto;
-        }
-        header h1 {
-            margin-top: 20px;
-            font-size: 2.5em;
-            color: #6c757d;
-        }
+        
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f9fa;
-            margin: 0;
-            padding: 20px;
-            
-        }
-        .menu {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .menu-section {
-            margin-bottom: 40px;
-        }
-        .menu-section h2 {
-            border-bottom: 2px solid #6c757d;
-            padding-bottom: 10px;
-            color: #6c757d;
-        }
-        .menu-item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-        .item-details {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-        }
-        .item-name {
-            font-weight: bold;
-            color: #343a40;
-        }
-        .item-price {
-            color: #6c757d;
-        }
-        .item-image {
-            max-width: 100px;
-            max-height: 100px;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
-        @media (max-width: 768px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .item-image {
-                margin-bottom: 10px;
-                margin-right: 0;
-            }
-        }
+    font-family: Arial, sans-serif;
+    background-color: #2e1606;
+    margin: 0;
+    padding: 20px;
+    background-image: url(../d8b331d78ef50a735fc9fa0c641bbcb7.jpg);
+}
+.menu {
+    max-width: 1000px;
+    width: 80%;
+    padding: 50px;
+    border-radius: 8px;
+    margin: 0 auto;
+   
+    
+}
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+header h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #f3a90a;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+.menu-section h2 {
+    border-bottom: 2px solid #7d543c;
+    padding-bottom: 10px;
+    color: #f3a90a;
+}
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.menu-item {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.item-name {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.item-description {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.order-now-btn {
+    background-color: #7d543c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.order-now-btn:hover {
+    background-color: #5f3e2d;
+}
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .menu-item {
+        flex: 1 1 100%;
+    }
+}
+
     </style>
 </head>
 <body>
 
 <div class="menu">
-
     <header>
-        <img src="src/2023-10-08.jpg" alt="Coffee Shop">
-        <h1>Djazz Menu</h1>
+        <img src="../src/2023-10-08.jpg" alt="Coffee Shop">
+        
     </header>
-
     <section class="menu-section">
-        <h2>Coffee</h2>
-        <div class="menu-item">
-            <img src="src/2023-10-08 (1).jpg" alt="Espresso" class="item-image">
-            <div class="item-details">
+        <h2>Nos Cafés</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="../src/FB_IMG_1697192865092.jpg" alt="Espresso">
                 <span class="item-name">Espresso</span>
-                <span class="item-price">$3.00</span>
+                <span class="item-description">Savor the Richness</span>
+                
             </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/americano.jpg" alt="Americano" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Americano</span>
-                <span class="item-price">$3.50</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/latte.jpg" alt="Latte" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Latte</span>
-                <span class="item-price">$4.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/cappuccino.jpg" alt="Cappuccino" class="item-image">
-            <div class="item-details">
+            <div class="menu-item">
+                <img src="../src/2023-10-08 (1).jpg" alt="Cappuccino">
                 <span class="item-name">Cappuccino</span>
-                <span class="item-price">$4.00</span>
+                <span class="item-description">Experience the Harmony</span>
+                
             </div>
-        </div>
-    </section>
-
-    <section class="menu-section">
-        <h2>Tea</h2>
-        <div class="menu-item">
-            <img src="images/green-tea.jpg" alt="Green Tea" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Green Tea</span>
-                <span class="item-price">$3.00</span>
+            <div class="menu-item">
+                <img src="images/latte.jpg" alt="Latte">
+                <span class="item-name">Latte</span>
+                <span class="item-description">Enjoy the Creaminess</span>
+                
             </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/black-tea.jpg" alt="Black Tea" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Black Tea</span>
-                <span class="item-price">$3.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/herbal-tea.jpg" alt="Herbal Tea" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Herbal Tea</span>
-                <span class="item-price">$3.50</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="menu-section">
-        <h2>Pastries</h2>
-        <div class="menu-item">
-            <img src="images/croissant.jpg" alt="Croissant" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Croissant</span>
-                <span class="item-price">$2.50</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/muffin.jpg" alt="Muffin" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Muffin</span>
-                <span class="item-price">$2.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/scone.jpg" alt="Scone" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Scone</span>
-                <span class="item-price">$2.75</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="menu-section">
-        <h2>Sandwiches</h2>
-        <div class="menu-item">
-            <img src="images/ham-cheese.jpg" alt="Ham & Cheese" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Ham & Cheese</span>
-                <span class="item-price">$5.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/turkey-club.jpg" alt="Turkey Club" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Turkey Club</span>
-                <span class="item-price">$6.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/veggie.jpg" alt="Veggie" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Veggie</span>
-                <span class="item-price">$4.50</span>
-            </div>
-        </div>
-    </section>
-    <section class="menu-section">
-        <h2>Sandwiches</h2>
-        <div class="menu-item">
-            <img src="images/ham-cheese.jpg" alt="Ham & Cheese" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Ham & Cheese</span>
-                <span class="item-price">$5.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/turkey-club.jpg" alt="Turkey Club" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Turkey Club</span>
-                <span class="item-price">$6.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="images/veggie.jpg" alt="Veggie" class="item-image">
-            <div class="item-details">
-                <span class="item-name">Veggie</span>
-                <span class="item-price">$4.50</span>
+            <div class="menu-item">
+                <img src="images/cold-brew.jpg" alt="Cold Brew">
+                <span class="item-name">Cold Brew</span>
+                <span class="item-description">Embrace the Chill</span>
+                
             </div>
         </div>
     </section>
